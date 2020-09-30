@@ -7,8 +7,18 @@ class SGraphics {
 		this.g = g;
 	}
 
-	public void drawRect(Rect s, STexture t) {
+	public void finishFrame() {
+		current.evaluatePixelGrid();
+		pervious = current.copy();
+		current.render(g);
+	}
 
+	public void drawRect(Rect s, SColor c) {
+		this.drawRect(s, new STexture(c));
+	}
+
+	public void drawRect(Rect s, STexture t) {
+		current.addObject(new SRect(s, t));
 	}
 }
 
