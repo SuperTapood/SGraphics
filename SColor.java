@@ -19,6 +19,12 @@ class SColor {
 		this.b = rgb[2];
 	}
 
+	public SColor(float[] rgb){
+		this.r = SColor.FloatToInt(rgb[0]);
+		this.g = SColor.FloatToInt(rgb[1]);
+		this.b = SColor.FloatToInt(rgb[2]);
+	}
+
 	public SColor(float gray){
 		staticColor = SColor.FloatToInt(gray);
 		this.r = staticColor;
