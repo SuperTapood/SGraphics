@@ -6,4 +6,10 @@ class SGraphics {
 	public SGraphics(Graphics g) {
 		this.g = g;
 	}
+
+	public void drawRect(Rect s, STexture t) {
+
+	}
 }
+
+// https://docs.oracle.com/javase/7/docs/api/java/awt/Graphics.html

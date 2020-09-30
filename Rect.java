@@ -1,3 +1,7 @@
-class Rect {
+// Rectangle
 
+class Rect {
+  int w;
+  int h;
+  Pt origin;
 }
