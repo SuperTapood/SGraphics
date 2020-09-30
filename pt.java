@@ -1,3 +1,5 @@
+// Point
+
 class Pt {
 	int x;
 	int y;

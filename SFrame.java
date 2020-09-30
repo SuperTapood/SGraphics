@@ -1,4 +1,8 @@
 class SFrame {
 	SObject[] objects = new SObject[256];
-	SPixelGrid
+	SPixelGrid pg;
+
+	SFrame(int w, int h) {
+		
+	}
 }

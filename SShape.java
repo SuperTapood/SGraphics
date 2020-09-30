@@ -1,7 +1,6 @@
-class SShape {
+abstract class SShape {
   Pt[][] all;
 
-  public Pt getPointByIndex(int index) {
-    
-  }
+  public Pt getPixelByIndex(int index);
+  public Rect getBoundingBox();
 }
