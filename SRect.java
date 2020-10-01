@@ -1,3 +1,2 @@
 class SRect extends SShape {
-  
 }
