@@ -17,6 +17,7 @@ class Ln {
       // Fill Constructor
     }
 
+    // OVERRIDING WHAT
     @Override
   	public Ln copy() {
   		// Fill Method

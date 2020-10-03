@@ -41,6 +41,7 @@ class SColor {
 		this.b = gray;
 	}
 
+	// OVERRIDING WHAT
 	@Override
 	public SColor copy() {
 		// Fill Method

@@ -11,14 +11,15 @@ class STexture {
     color = c;
   }
 
+  // took the liberty to indent this bad boy
   public SPixel getPixelByPosition(Pt pos) {
     switch (mode) {
       case STexture.NONE:
-      return SColor.BLACK;
-      break;
+        return SColor.BLACK;
+        break;
       case STexture.COLOR:
-      return color;
-      break;
+        return color;
+        break;
     }
   }
 
