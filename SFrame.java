@@ -16,10 +16,15 @@ class SFrame {
 	}
 
 	public void evaluatePixelGrid() {
-
+		// Fill Method - Heavy operation! (ShZil will do)
 	}
 
 	public void render(Graphics gr) {
 		pg.render(gr);
+	}
+
+	@Override
+	public SFrame copy() {
+		// Fill Method
 	}
 }

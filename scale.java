@@ -36,4 +36,9 @@ class Scale {
 		this.x = other.x;
 		this.y = other.y;
 	}
+
+  @Override
+	public Scale copy() {
+		// Fill Method
+	}
 }

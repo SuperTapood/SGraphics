@@ -40,4 +40,9 @@ class SColor {
 		this.g = gray;
 		this.b = gray;
 	}
+
+	@Override
+	public SColor copy() {
+		// Fill Method
+	}
 }
