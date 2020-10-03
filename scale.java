@@ -1,3 +1,5 @@
+// what the hell is this class for why do we need scale
+
 class Scale {
   float x;
   float y;
@@ -37,7 +39,8 @@ class Scale {
 		this.y = other.y;
 	}
 
-  @Override
+	// OVERIDING WHAT
+  	@Override
 	public Scale copy() {
 		// Fill Method
 	}
