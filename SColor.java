@@ -45,4 +45,8 @@ class SColor {
 	public SColor copy() {
 		// Fill Method
 	}
+
+	public Color getColor() {
+		return new Color(this.r, this.g, this.b);
+	}
 }

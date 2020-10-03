@@ -16,7 +16,9 @@ class SFrame {
 	}
 
 	public void evaluatePixelGrid() {
-		// Fill Method - Heavy operation! (ShZil will do)
+		for (SObject o : objects) {
+			pg.drawObject(o);
+		}
 	}
 
 	public void render(Graphics gr) {

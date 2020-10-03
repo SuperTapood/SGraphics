@@ -31,4 +31,9 @@ class SPixel {
 	public SPixel copy() {
 		// Fill Method
 	}
+
+	public void render(Graphics g) {
+    g.setColor(this.color.getColor());
+    g.drawLine(this.x, this.y, this.x, this.y);
+	}
 }

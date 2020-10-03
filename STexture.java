@@ -11,7 +11,7 @@ class STexture {
     color = c;
   }
 
-  public SPixel getPixelByPosition(Pt pos) {
+  public SColor getColorByPosition(Pt pos) {
     switch (mode) {
       case STexture.NONE:
         return SColor.BLACK;
