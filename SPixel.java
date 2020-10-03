@@ -26,4 +26,9 @@ class SPixel {
 		this.y = loc.y;
 		this.color = color;
 	}
+
+	@Override
+	public SPixel copy() {
+		// Fill Method
+	}
 }

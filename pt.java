@@ -19,6 +19,11 @@ class Pt {
 		this.y = other.y;
 	}
 
+	@Override
+	public Pt copy() {
+		return new Pt(this.x, this.y);
+	}
+
 	public void add(Pt other) {
 		this.x += other.x;
 		this.y += other.y;
