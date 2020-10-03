@@ -3,13 +3,13 @@ class SPixelGrid {
   int width;
   int height;
 
-  SPixelGrid(int w, int h) {
+  public SPixelGrid(int w, int h) {
     width = w;
     height = h;
     pixels = new SPixel[width][height];
   }
 
-  SPixelGrid(Rect d) {
+  public SPixelGrid(Rect d) {
     width = d.w;
     height = d.h;
     pixels = new SPixel[width][height];

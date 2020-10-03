@@ -2,7 +2,7 @@ class SFrame {
 	SObject[] objects = new SObject[256];
 	SPixelGrid pg;
 
-	SFrame(int w, int h) {
+	public SFrame(int w, int h) {
 		pg = new SPixelGrid(w, h);
 	}
 

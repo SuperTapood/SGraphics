@@ -6,7 +6,7 @@ class STexture {
 
   SColor color;
 
-  STexture(SColor c) {
+  public STexture(SColor c) {
     mode = STexture.COLOR;
     color = c;
   }
@@ -14,11 +14,11 @@ class STexture {
   public SPixel getPixelByPosition(Pt pos) {
     switch (mode) {
       case STexture.NONE:
-      return SColor.BLACK;
-      break;
+        return SColor.BLACK;
+        break;
       case STexture.COLOR:
-      return color;
-      break;
+        return color;
+        break;
     }
   }
 
