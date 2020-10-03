@@ -6,9 +6,6 @@ class SFrame {
 		pg = new SPixelGrid(w, h);
 	}
 
-	// what the hell is this
-	// why cant we just get an append function
-	// and shouldn't SObject include a parameter name as well?
 	public void addObject(SObject) {
 		SObject[] arr = SUtil.replaceSingleNull(this.objects, SObject);
 		if (arr == null) {
