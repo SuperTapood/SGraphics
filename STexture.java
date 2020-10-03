@@ -6,12 +6,11 @@ class STexture {
 
   SColor color;
 
-  STexture(SColor c) {
+  public STexture(SColor c) {
     mode = STexture.COLOR;
     color = c;
   }
 
-  // took the liberty to indent this bad boy
   public SPixel getPixelByPosition(Pt pos) {
     switch (mode) {
       case STexture.NONE:
