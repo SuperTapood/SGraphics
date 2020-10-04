@@ -8,6 +8,7 @@ class Rect {
   public Rect(int w, int h){
     this.w = w;
     this.h = h;
+    this.origin = new Pt(0, 0);
   }
 
   public int getSize() {
