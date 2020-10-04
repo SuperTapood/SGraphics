@@ -10,11 +10,13 @@ class Ln {
     }
 
     public Ln(Pt a, int x, int y) {
-      // Fill Constructor
+      this.a = a;
+      this.b = Pt(x, y);
     }
 
     public Ln(int x1, int y1, int x2, int y2) {
-      // Fill Constructor
+      this.a = Pt(x1, y1);
+      this.b = Pt(x2, y2);
     }
 
     @Override
