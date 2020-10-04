@@ -21,8 +21,8 @@ class Ln {
 
     @Override
   	public Ln copy() {
-  		a = this.a.copy();
-      b = this.b.copy();
+  		Pt a = this.a.copy();
+      Pt b = this.b.copy();
       return new Ln(a, b);
   	}
 }
