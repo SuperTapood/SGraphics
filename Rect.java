@@ -5,7 +5,7 @@ class Rect {
   int h;
   Pt origin;
 
-  public Rect(int w, int h){
+  public Rect(int w, int h, Pt origin){
     this.w = w;
     this.h = h;
   }
