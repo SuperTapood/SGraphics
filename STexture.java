@@ -11,23 +11,25 @@ class STexture {
     color = c;
   }
 
-  public SPixel getPixelByPosition(Pt pos) {
+  public SColor getColorByPosition(Pt pos) {
+    SColor toReturn = SColor.BLACK;
     switch (mode) {
       case STexture.NONE:
-        return SColor.BLACK;
+         toReturn = SColor.BLACK;
         break;
       case STexture.COLOR:
-        return color;
+         toReturn = color;
         break;
     }
+    return toReturn;
   }
 
-  public SPixel getPixelByPosition(int x, int y) {
-    return getPixelByPosition(new Pt(x, y));
+  public SColor getColorByPosition(int x, int y) {
+    return getColorByPosition(new Pt(x, y));
   }
 
-  public SPixel getPixelByPosition(int[] pos) {
-    return getPixelByPosition(new Pt(pos[0], pos[1]));
+  public SColor getColorByPosition(int[] pos) {
+    return getColorByPosition(new Pt(pos[0], pos[1]));
   }
 
   public STexture copy(){

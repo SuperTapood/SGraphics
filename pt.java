@@ -23,39 +23,43 @@ class Pt {
 		return new Pt(this.x, this.y);
 	}
 
-	public void add(Pt other) {
+	public Pt add(Pt other) {
 		this.x += other.x;
 		this.y += other.y;
+		return this;
 	}
 
-	public void add(int x, int y) {
-		this.add(new Pt(x, y));
+	public Pt add(int x, int y) {
+		return this.add(new Pt(x, y));
 	}
 
-	public void add(int[] loc) {
-		this.add(new Pt(loc));
+	public Pt add(int[] loc) {
+		return this.add(new Pt(loc));
 	}
 
-	public void sub(Pt other) {
+	public Pt sub(Pt other) {
 		this.x -= other.x;
 		this.y -= other.y;
+		return this;
 	}
 
-	public void sub(int x, int y) {
-		this.sub(new Pt(x, y));
+	public Pt sub(int x, int y) {
+		return this.sub(new Pt(x, y));
 	}
 
-	public void sub(int[] loc) {
-		this.sub(new Pt(loc));
+	public Pt sub(int[] loc) {
+		return this.sub(new Pt(loc));
 	}
 
-	public void mult(Scale scale) {
+	public Pt mult(Scale scale) {
 		this.x *= scale.x;
 		this.y *= scale.y;
+		return this;
 	}
 
-	public void div(Scale scale) {
+	public Pt div(Scale scale) {
 		this.x /= scale.x;
 		this.y /= scale.y;
+		return this;
 	}
 }

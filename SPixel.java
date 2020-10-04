@@ -1,3 +1,5 @@
+import java.awt.Graphics;
+
 class SPixel {
 	SColor color;
 	int x;
@@ -27,8 +29,16 @@ class SPixel {
 		this.color = color;
 	}
 
+	public void setColor(SColor to) {
+		this.color = to;
+	}
 
 	public SPixel copy() {
 		return new SPixel(this.x, this.y, this.color);
+	}
+
+	public void render(Graphics g) {
+    g.setColor(this.color.getColor());
+    g.drawLine(this.x, this.y, this.x, this.y);
 	}
 }

@@ -3,15 +3,20 @@ import java.awt.Graphics;
 class SGraphics {
 	Graphics g;
 	SFrame previous = null;
-	SFrame current = new SFrame(SFrame.FROM_BG_COLOR, new SColor());
+	SFrame current;
+	int sizeX;
+	int sizeY;
 
-	public SGraphics(Graphics g) {
+	public SGraphics(Graphics g, int sizeX, int sizeY) {
 		this.g = g;
+		this.sizeX = sizeX;
+		this.sizeY = sizeY;
+		current = new SFrame(sizeX, sizeY);
 	}
 
 	public void finishFrame() {
 		current.evaluatePixelGrid();
-		pervious = current.copy();
+		previous = current.copy();
 		current.render(g);
 	}
 
@@ -20,7 +25,7 @@ class SGraphics {
 	}
 
 	public void drawRect(Rect s, STexture t) {
-		current.addObject(new SRect(s, t));
+		current.addObject(new SObject(new SRect(s), t));
 	}
 }
 
