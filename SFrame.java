@@ -25,6 +25,12 @@ class SFrame {
 
 	@Override
 	public SFrame copy() {
-		// Fill Method
+		int w = this.pg.width;
+		int h = this.pg.height;
+		SFrame frame = new SFrame(w, h);
+		// this better work
+		for (SObject obj : this.objects){
+			frame.addObject(obj.copy());
+		}
 	}
 }
