@@ -27,7 +27,7 @@ class SPixel {
 		this.color = color;
 	}
 
-	@Override
+
 	public SPixel copy() {
 		return new SPixel(this.x, this.y, this.color);
 	}

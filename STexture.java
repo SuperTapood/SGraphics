@@ -29,4 +29,8 @@ class STexture {
   public SPixel getPixelByPosition(int[] pos) {
     return getPixelByPosition(new Pt(pos[0], pos[1]));
   }
+
+  public STexture copy(){
+    return new STexture(this.color);
+  }
 }

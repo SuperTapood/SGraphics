@@ -1,26 +1,26 @@
 class SRect extends SShape {
-  int x; int y; int w; int h;
+  Rect rect;
+  STexture texture;
 
-  public SRect(int x, int y, int w, int h){
-    this.x = x; this.y = y; this.w = w; this.h = h;
+  public SRect(int w, int h, STexture texture){
+    this.rect = new Rect(w, h);
+    this.texture = texture;
   }
 
-  public SRect(Pt pt, int w, int h){
-    this.x = pt.x;
-    this.y = pt.y;
-    this.w = w;
-    this.h = h;
+  public SRect(int[] values, STexture texture){
+    int h = values[2];
+    int w = values[3];
+    this.rect = new Rect(h, w);
+    this.texture = texture;
   }
 
-  public SRect(int[] values){
-    this.x = values[0];
-    this.y = values[1];
-    this.h = values[2];
-    this.w = values[3];
+  public SRect(Rect rect, STexture texture){
+    this.rect = rect;
+    this.texture = texture;
   }
 
-  @Override
+
   public SRect copy(){
-    return new SRect(this.x, this.y, this.w, this.h);
+    return new SRect(this.rect.copy(), this.texture.copy());
   }
 }

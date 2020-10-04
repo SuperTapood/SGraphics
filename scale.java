@@ -37,7 +37,7 @@ class Scale {
 		this.y = other.y;
 	}
 
-  @Override
+
 	public Scale copy() {
 		return new Scale(this);
 	}

@@ -29,7 +29,7 @@ class SColor {
 	}
 
 	public SColor(float gray){
-		staticColor = SColor.FloatToInt(gray);
+		int staticColor = this.FloatToInt(gray);
 		this.r = staticColor;
 		this.g = staticColor;
 		this.b = staticColor;
@@ -41,7 +41,7 @@ class SColor {
 		this.b = gray;
 	}
 
-	@Override
+
 	public SColor copy() {
 		return new SColor(this.r, this.g, this.b);
 	}

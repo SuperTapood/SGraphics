@@ -1,5 +1,9 @@
+import java.awt.Graphics;
+
+
 class SFrame {
 	SPixelGrid pg;
+	SObject[] objects;
 
 	public SFrame(int w, int h) {
 		pg = new SPixelGrid(w, h);
@@ -28,7 +32,6 @@ class SFrame {
 		pg.render(gr);
 	}
 
-	@Override
 	public SFrame copy() {
 		int w = this.pg.width;
 		int h = this.pg.height;
