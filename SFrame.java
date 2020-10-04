@@ -1,6 +1,5 @@
 import java.awt.Graphics;
 
-
 class SFrame {
 	SPixelGrid pg;
 	SObject[] objects = new SObject[256];
@@ -10,12 +9,14 @@ class SFrame {
 	}
 
 	public void addObject(SObject obj) {
-		SObject[] arr = SUtil.replaceSingleNull(this.objects, obj);
-		if (arr == null) {
-			System.out.println("The Array is Full! Increase the size or remove elements");
-		} else {
-			this.objects = arr;
-		}
+		// SObject[] arr = SUtil.replaceSingleNull(this.objects, obj);
+		// if (arr == null) {
+		//  can't you just throw an exception?
+		// 	System.out.println("The Array is Full! Increase the size or remove elements");
+		// } else {
+		// 	this.objects = arr;
+		// }
+		this.objects.add(obj);
 	}
 
 	public void evaluatePixelGrid() {
