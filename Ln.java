@@ -21,6 +21,8 @@ class Ln {
 
     @Override
   	public Ln copy() {
-  		// Fill Method
+  		a = this.a.copy();
+      b = this.b.copy();
+      return Ln(a, b);
   	}
 }
