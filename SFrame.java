@@ -1,13 +1,18 @@
 class SFrame {
-	SObject[] objects = new SObject[256];
 	SPixelGrid pg;
 
 	public SFrame(int w, int h) {
 		pg = new SPixelGrid(w, h);
+		SObject[] objects = new SObject[256];
 	}
 
-	public void addObject(SObject) {
-		SObject[] arr = SUtil.replaceSingleNull(this.objects, SObject);
+	public SFrame(int w, int h, int objectCount){
+		pg = new SPixelGrid(w, h);
+		SObject[] objects = new SObject[objectCount];
+	}
+
+	public void addObject(SObject obj) {
+		SObject[] arr = SUtil.replaceSingleNull(this.objects, obj);
 		if (arr == null) {
 			System.out.println("The Array is Full! Increase the size or remove elements");
 		} else {
