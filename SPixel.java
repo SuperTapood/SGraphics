@@ -27,9 +27,9 @@ class SPixel {
 		this.color = color;
 	}
 
-	@Override
+
 	public SPixel copy() {
-		// Fill Method
+		return new SPixel(this.x, this.y, this.color);
 	}
 
 	public void render(Graphics g) {

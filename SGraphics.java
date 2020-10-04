@@ -1,3 +1,5 @@
+import java.awt.Graphics;
+
 class SGraphics {
 	Graphics g;
 	SFrame previous = null;
