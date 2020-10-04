@@ -3,16 +3,10 @@ import java.awt.Graphics;
 
 class SFrame {
 	SPixelGrid pg;
-	SObject[] objects;
+	SObject[] objects = new SObject[256];
 
 	public SFrame(int w, int h) {
 		pg = new SPixelGrid(w, h);
-		SObject[] objects = new SObject[256];
-	}
-
-	public SFrame(int w, int h, int objectCount){
-		pg = new SPixelGrid(w, h);
-		SObject[] objects = new SObject[objectCount];
 	}
 
 	public void addObject(SObject obj) {
