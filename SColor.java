@@ -43,6 +43,6 @@ class SColor {
 
 	@Override
 	public SColor copy() {
-		// Fill Method
+		return SColor(this.r, this.g, this.b);
 	}
 }
