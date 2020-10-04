@@ -39,6 +39,6 @@ class Scale {
 
   @Override
 	public Scale copy() {
-		// Fill Method
+		return Scale(this);
 	}
 }
