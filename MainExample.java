@@ -6,7 +6,7 @@ class MainExample extends Canvas {
   int sizeY = 500;
 
   public void paint(Graphics gr) {
-    SGraphics g = new SGraphics(gr);
+    SGraphics g = new SGraphics(gr, sizeX, sizeY);
     // All the drawing attempts and syntax review.
     Rect objectShape1 = new Rect(100, 100);
     g.drawRect(objectShape1, SColor.WHITE);
@@ -19,7 +19,7 @@ class MainExample extends Canvas {
 
     f.add(m);
     f.setSize(m.sizeX, m.sizeY);
-    f.setDefaultClosingOperation(JFrame.EXIT_ON_CLOSE);
+    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     f.setVisible(true);
   }
 }

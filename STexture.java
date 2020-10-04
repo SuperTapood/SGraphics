@@ -22,11 +22,11 @@ class STexture {
     }
   }
 
-  public SPixel getPixelByPosition(int x, int y) {
+  public SColor getPixelByPosition(int x, int y) {
     return getPixelByPosition(new Pt(x, y));
   }
 
-  public SPixel getPixelByPosition(int[] pos) {
+  public SColor getPixelByPosition(int[] pos) {
     return getPixelByPosition(new Pt(pos[0], pos[1]));
   }
 
