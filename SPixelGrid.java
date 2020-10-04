@@ -21,7 +21,7 @@ class SPixelGrid {
     Rect boundingBox = o.getBoundingBox();
     for (int i = 0; i < boundingBox.getSize(); i++) {
       Pt point = boundingBox.getPositionByIndex(i);
-      this.pixels[point.x, point.y].setColor(o.getPixel(point));
+      pixels[point.x][point.y].setColor(o.getPixel(point));
     }
   }
 
