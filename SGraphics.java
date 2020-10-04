@@ -3,7 +3,7 @@ import java.awt.Graphics;
 class SGraphics {
 	Graphics g;
 	SFrame previous = null;
-	SFrame current = new SFrame(SFrame.FROM_BG_COLOR, new SColor());
+	SFrame current;
 	int sizeX;
 	int sizeY;
 
@@ -16,7 +16,7 @@ class SGraphics {
 
 	public void finishFrame() {
 		current.evaluatePixelGrid();
-		pervious = current.copy();
+		previous = current.copy();
 		current.render(g);
 	}
 
