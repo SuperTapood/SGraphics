@@ -22,12 +22,12 @@ class STexture {
     }
   }
 
-  public SColor getPixelByPosition(int x, int y) {
-    return getPixelByPosition(new Pt(x, y));
+  public SColor getColorByPosition(int x, int y) {
+    return getColorByPosition(new Pt(x, y));
   }
 
-  public SColor getPixelByPosition(int[] pos) {
-    return getPixelByPosition(new Pt(pos[0], pos[1]));
+  public SColor getColorByPosition(int[] pos) {
+    return getColorByPosition(new Pt(pos[0], pos[1]));
   }
 
   public STexture copy(){
