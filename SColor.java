@@ -43,6 +43,6 @@ class SColor {
 
 	@Override
 	public SColor copy() {
-		return SColor(this.r, this.g, this.b);
+		return new SColor(this.r, this.g, this.b);
 	}
 }

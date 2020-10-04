@@ -23,6 +23,6 @@ class Ln {
   	public Ln copy() {
   		a = this.a.copy();
       b = this.b.copy();
-      return Ln(a, b);
+      return new Ln(a, b);
   	}
 }
