@@ -9,14 +9,25 @@ class SFrame {
 	}
 
 	public void addObject(SObject obj) {
-		// SObject[] arr = SUtil.replaceSingleNull(this.objects, obj);
-		// if (arr == null) {
-		//  can't you just throw an exception?
-		// 	System.out.println("The Array is Full! Increase the size or remove elements");
-		// } else {
-		// 	this.objects = arr;
-		// }
-		this.objects.add(obj);
+		SObject[] arr = SUtil.replaceSingleNull(this.objects, obj);
+		if (arr == null) {
+			System.out.println("The Array is Full! Increase the size or remove elements");
+			System.out.println(objects);
+			String toOutput = "[";
+			for (int i = 0; i < 256; i++) {
+				toOutput += objects[i].toString() + ", ";
+			}
+			System.out.println(toOutput + "END]");
+		} else {
+			this.objects = arr;
+			System.out.println("The Array is NOT Full! Item: "+obj.toString()+" was added successfully");
+			System.out.println(objects);
+			String toOutput = "[";
+			for (int i = 0; i < 256; i++) {
+				toOutput += objects[i].toString() + ", ";
+			}
+			System.out.println(toOutput + "END]");
+		}
 	}
 
 	public void evaluatePixelGrid() {
