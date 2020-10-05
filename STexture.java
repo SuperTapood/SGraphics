@@ -32,7 +32,20 @@ class STexture {
     return getColorByPosition(new Pt(pos[0], pos[1]));
   }
 
-  public STexture copy(){
+  public STexture copy() {
     return new STexture(this.color);
+  }
+
+  public String toString() {
+    String toReturn;
+    switch (mode) {
+      case STexture.NONE:
+         toReturn = "NONE";
+        break;
+      case STexture.COLOR:
+         toReturn = "COLOR="+color.toString();
+        break;
+    }
+    return toReturn;
   }
 }

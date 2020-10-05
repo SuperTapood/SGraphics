@@ -33,6 +33,6 @@ class SRect extends SShape {
   }
 
   public String toString() {
-    return "Rectangle";
+    return "Rectangle:"+rect.toString();
   }
 }

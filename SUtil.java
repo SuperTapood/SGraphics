@@ -1,26 +1,22 @@
 class SUtil {
   public static Object[] replaceSingleNull(Object[] array, Object element) {
-    boolean successful = false;
     for (int i = 0; i < array.length; i++) {
       if (array[i] == null) {
         array[i] = element;
-        successful = true;
-        break;
+        return array;
       }
     }
-    return successful ? array : null;
+    return null;
   }
 
   public static SObject[] replaceSingleNull(SObject[] array, SObject element) {
-    boolean successful = false;
     for (int i = 0; i < array.length; i++) {
       if (array[i] == null) {
         array[i] = element;
-        successful = true;
-        break;
+        return array;
       }
     }
-    return successful ? array : null;
+    return null;
   }
 
   public static Object[] pop(Object[] arr, int index) {

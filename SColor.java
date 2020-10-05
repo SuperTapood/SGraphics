@@ -57,4 +57,12 @@ class SColor {
 	public Color getColor() {
 		return new Color(this.r, this.g, this.b);
 	}
+
+	public String toString() {
+		if (r == g == b) {
+			return "GREYSCALE:"+r;
+		} else {
+			return "RGB:"+r+","+g+","+b;
+		}
+	}
 }
