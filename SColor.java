@@ -5,9 +5,6 @@ class SColor {
 	int g;
 	int b;
 
-	public static final SColor BLACK = new SColor(0f);
-	public static final SColor WHITE = new SColor(1f);
-
 	private static int floatToInt(float x) {
 		return (int)(x * 255);
 	}

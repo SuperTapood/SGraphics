@@ -30,7 +30,7 @@ class SPixelGrid {
   public void construct() {
     for (int i = 0; i < pixels.length; i++) {
       for (int j = 0; j < pixels[i].length; j++) {
-        pixels[i][j] = new SPixel(i, j, SColor.BLACK);
+        pixels[i][j] = new SPixel(i, j, Const.BLACK);
       }
     }
   }
