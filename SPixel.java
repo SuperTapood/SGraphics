@@ -38,6 +38,8 @@ class SPixel {
 	}
 
 	public void render(Graphics g) {
+		System.out.println("SPixel.render: Graphics g: "+g);
+		System.out.println("SPixel.render(): this.color: "+this.color);
     g.setColor(this.color.getColor());
     g.drawLine(this.x, this.y, this.x, this.y);
 	}

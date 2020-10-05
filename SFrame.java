@@ -30,6 +30,7 @@ class SFrame {
 	}
 
 	public void render(Graphics gr) {
+		System.out.println("SFrame.render(): "+gr);
 		pg.render(gr);
 	}
 

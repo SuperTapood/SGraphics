@@ -49,7 +49,6 @@ class SColor {
 		this.b = 0;
 	}
 
-
 	public SColor copy() {
 		return new SColor(this.r, this.g, this.b);
 	}
