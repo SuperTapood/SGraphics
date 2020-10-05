@@ -11,7 +11,7 @@ class MainExample extends Canvas {
     System.out.println("Graphics:"+gr);
     // All the drawing attempts and syntax review.
     Rect objectShape1 = new Rect(100, 100);
-    g.drawRect(objectShape1, SColor.WHITE);
+    g.drawRect(objectShape1, Const.WHITE);
     gr.setColor(new Color(0, 0, 0));
     gr.fillRect(0, 0, 100, 100);
 

@@ -8,7 +8,7 @@ class SPixel {
 	public SPixel(int x, int y) {
 		this.x = x;
 		this.y = y;
-		this.color = SColor.BLACK;
+		this.color = Const.BLACK;
 	}
 
 	public SPixel(int x, int y, SColor color) {
@@ -20,7 +20,7 @@ class SPixel {
 	public SPixel(Pt loc) {
 		this.x = loc.x;
 		this.y = loc.y;
-		this.color = SColor.BLACK;
+		this.color = Const.BLACK;
 	}
 
 	public SPixel(Pt loc, SColor color) {

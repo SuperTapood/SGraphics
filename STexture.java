@@ -12,10 +12,10 @@ class STexture {
   }
 
   public SColor getColorByPosition(Pt pos) {
-    SColor toReturn = SColor.BLACK;
+    SColor toReturn = Const.BLACK;
     switch (mode) {
       case STexture.NONE:
-         toReturn = SColor.BLACK;
+         toReturn = Const.BLACK;
         break;
       case STexture.COLOR:
          toReturn = color;
