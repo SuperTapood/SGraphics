@@ -36,7 +36,7 @@ class SPixelGrid {
   }
 
   public void render(Graphics gr) {
-    System.out.println("SPixelGrid.render(): "+gr);
+    // System.out.println("SPixelGrid.render(): "+gr);
     for (int i = 0; i < pixels.length; i++) {
       for (int j = 0; j < pixels[i].length; j++) {
         pixels[i][j].render(gr);

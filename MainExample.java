@@ -7,8 +7,8 @@ class MainExample extends Canvas {
 
   public void paint(Graphics gr) {
     SGraphics g = new SGraphics(gr, sizeX, sizeY);
-    System.out.println("SGraphics:"+g);
-    System.out.println("Graphics:"+gr);
+    // System.out.println("SGraphics:"+g);
+    // System.out.println("Graphics:"+gr);
     // All the drawing attempts and syntax review.
     Rect objectShape1 = new Rect(100, 100);
     g.drawRect(objectShape1, Const.WHITE);

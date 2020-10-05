@@ -11,14 +11,14 @@ class SFrame {
 	public void addObject(SObject obj) {
 		SObject[] arr = SUtil.replaceSingleNull(this.objects, obj);
 		if (arr == null) {
-			System.out.println("The Array is Full! Increase the size or remove elements");
-			System.out.println(objects);
-			System.out.println(SUtil.arrayToString(objects));
+			// System.out.println("The Array is Full! Increase the size or remove elements");
+			// System.out.println(objects);
+			// System.out.println(SUtil.arrayToString(objects));
 		} else {
 			this.objects = arr;
-			System.out.println("Item: "+obj.toString()+" was added successfully to Frame");
-			System.out.println(objects);
-			System.out.println(SUtil.arrayToString(objects));
+			// System.out.println("Item: "+obj.toString()+" was added successfully to Frame");
+			// System.out.println(objects);
+			// System.out.println(SUtil.arrayToString(objects));
 		}
 	}
 
@@ -30,7 +30,7 @@ class SFrame {
 	}
 
 	public void render(Graphics gr) {
-		System.out.println("SFrame.render(): "+gr);
+		// System.out.println("SFrame.render(): "+gr);
 		pg.render(gr);
 	}
 

@@ -30,9 +30,9 @@ class SPixel {
 	}
 
 	public void setColor(SColor to) {
-		System.out.println("SPixel.setColor: color:"+color.toString());
+		// System.out.println("SPixel.setColor: color:"+color.toString());
 		to = to == null ? Const.BLACK : to;
-		System.out.println("SPixel.setColor: to:"+to.toString());
+		// System.out.println("SPixel.setColor: to:"+to.toString());
 		this.color = to;
 	}
 
@@ -41,8 +41,8 @@ class SPixel {
 	}
 
 	public void render(Graphics g) {
-		System.out.println("SPixel.render: Graphics g: "+g);
-		System.out.println("SPixel.render(): this.color: "+this.color);
+		// System.out.println("SPixel.render: Graphics g: "+g);
+		// System.out.println("SPixel.render(): this.color: "+this.color);
     g.setColor(this.color.getColor());
     g.drawLine(this.x, this.y, this.x, this.y);
 	}
