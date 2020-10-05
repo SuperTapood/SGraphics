@@ -28,7 +28,11 @@ class SRect extends SShape {
     return rect.collides(point);
   }
 
-  public SRect copy(){
+  public SRect copy() {
     return new SRect(this.rect.copy());
+  }
+
+  public String toString() {
+    return "Rectangle";
   }
 }

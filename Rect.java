@@ -5,10 +5,22 @@ class Rect {
   int h;
   Pt origin;
 
-  public Rect(int w, int h, Pt origin){
+  public Rect(int w, int h){
     this.w = w;
     this.h = h;
     this.origin = new Pt(0, 0);
+  }
+
+  public Rect(int w, int h, Pt origin){
+    this.w = w;
+    this.h = h;
+    this.origin = origin;
+  }
+
+  public Rect( Pt origin, int w, int h){
+    this.w = w;
+    this.h = h;
+    this.origin = origin;
   }
 
   public int getSize() {
