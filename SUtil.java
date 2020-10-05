@@ -44,4 +44,17 @@ class SUtil {
     }
     return s.substring(0, s.length() - 2) + "]";
   }
+
+  public static SObject[] copyArray(SObject[] array) {
+    SObject[] o = new SObject[array.length];
+    for (int i = 0; i < o.length; i++) {
+      SObject obj = array[i];
+      if (obj == null) {
+        o[i] = null;
+      } else {
+        o[i] = array[i];
+      }
+    }
+    return o;
+  }
 }

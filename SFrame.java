@@ -37,9 +37,7 @@ class SFrame {
 		int w = this.pg.width;
 		int h = this.pg.height;
 		SFrame frame = new SFrame(w, h);
-		for (SObject obj : this.objects){
-			frame.addObject(obj.copy());
-		}
+		frame.objects = SUtil.copyArray(this.objects);
 		return frame;
 	}
 }
