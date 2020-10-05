@@ -5,6 +5,7 @@ class SUtil {
       if (array[i] == null) {
         array[i] = element;
         successful = true;
+        break;
       }
     }
     return successful ? array : null;
@@ -16,6 +17,7 @@ class SUtil {
       if (array[i] == null) {
         array[i] = element;
         successful = true;
+        break;
       }
     }
     return successful ? array : null;
