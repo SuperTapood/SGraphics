@@ -20,16 +20,28 @@ class SUtil {
   }
 
   public static Object[] pop(Object[] arr, int index) {
-        if (arr == null || index < 0 || index >= arr.length) {
-            return arr;
-        }
-        Object[] otherArray = new Object[arr.length];
-        for (int i = 0, k = 0; i < arr.length; i++) {
-            if (i == index) {
-                continue;
-            }
-            otherArray[k++] = arr[i];
-        }
-        return otherArray;
+    if (arr == null || index < 0 || index >= arr.length) {
+      return arr;
     }
+    Object[] otherArray = new Object[arr.length];
+    for (int i = 0, k = 0; i < arr.length; i++) {
+      if (i == index) {
+        continue;
+      }
+      otherArray[k++] = arr[i];
+    }
+    return otherArray;
+  }
+
+  public static String arrayToString(Object[] array) {
+    String s = "[";
+    for (int i = 0; i < array.length; i++) {
+      if (array[i] == null) {
+        s += "null, ";
+      } else {
+        s += array[i].toString() + ", ";
+      }
+    }
+    return s.substring(0, s.length() - 2) + "]";
+  }
 }

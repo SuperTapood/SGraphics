@@ -44,6 +44,6 @@ class Rect {
   }
 
   public String toString() {
-    return "□"+origin.x+"/"+origin.y+"/"+w+"/"+h;
+    return "Rect:"+origin.x+"/"+origin.y+"/"+w+"/"+h;
   }
 }

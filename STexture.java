@@ -37,7 +37,7 @@ class STexture {
   }
 
   public String toString() {
-    String toReturn;
+    String toReturn = "STexture";
     switch (mode) {
       case STexture.NONE:
          toReturn = "NONE";

@@ -13,20 +13,12 @@ class SFrame {
 		if (arr == null) {
 			System.out.println("The Array is Full! Increase the size or remove elements");
 			System.out.println(objects);
-			String toOutput = "[";
-			for (int i = 0; i < 256; i++) {
-				toOutput += objects[i].toString() + ", ";
-			}
-			System.out.println(toOutput + "END]");
+			System.out.println(SUtil.arrayToString(objects));
 		} else {
 			this.objects = arr;
 			System.out.println("The Array is NOT Full! Item: "+obj.toString()+" was added successfully");
 			System.out.println(objects);
-			String toOutput = "[";
-			for (int i = 0; i < 256; i++) {
-				toOutput += objects[i].toString() + ", ";
-			}
-			System.out.println(toOutput + "END]");
+			System.out.println(SUtil.arrayToString(objects));
 		}
 	}
 
