@@ -30,6 +30,9 @@ class SPixel {
 	}
 
 	public void setColor(SColor to) {
+		System.out.println("SPixel.setColor: color:"+color.toString());
+		to = to == null ? Const.BLACK : to;
+		System.out.println("SPixel.setColor: to:"+to.toString());
 		this.color = to;
 	}
 

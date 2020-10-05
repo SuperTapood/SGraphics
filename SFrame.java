@@ -16,7 +16,7 @@ class SFrame {
 			System.out.println(SUtil.arrayToString(objects));
 		} else {
 			this.objects = arr;
-			System.out.println("The Array is NOT Full! Item: "+obj.toString()+" was added successfully");
+			System.out.println("Item: "+obj.toString()+" was added successfully to Frame");
 			System.out.println(objects);
 			System.out.println(SUtil.arrayToString(objects));
 		}

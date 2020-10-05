@@ -56,7 +56,7 @@ class SColor {
 
 	public String toString() {
 		if (r == g && g == b) {
-			return "GREYSCALE:"+r;
+			return "GREY:"+r;
 		} else {
 			return "RGB:"+r+","+g+","+b;
 		}
