@@ -24,6 +24,7 @@ class SFrame {
 
 	public void evaluatePixelGrid() {
 		for (SObject o : objects) {
+			if (o == null) break;
 			pg.drawObject(o);
 		}
 	}
