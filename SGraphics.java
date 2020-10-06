@@ -14,10 +14,11 @@ class SGraphics {
 		current = new SFrame(sizeX, sizeY);
 	}
 
-	public void finishFrame() {
+	public void finishFrame(Graphics gr) {
+		// System.out.println("SGraphics.finishFrame(): "+gr);
 		current.evaluatePixelGrid();
 		previous = current.copy();
-		current.render(g);
+		current.render(gr);
 	}
 
 	public void drawRect(Rect s, SColor c) {

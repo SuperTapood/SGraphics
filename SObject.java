@@ -26,4 +26,8 @@ class SObject {
 	public SObject copy() {
 		return new SObject(s, t);
 	}
+
+	public String toString() {
+		return "SObject#" + s.toString() + "#" + t.toString();
+	}
 }

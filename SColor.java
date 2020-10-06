@@ -5,9 +5,6 @@ class SColor {
 	int g;
 	int b;
 
-	public static final SColor BLACK = new SColor(0f);
-	public static final SColor WHITE = new SColor(1f);
-
 	private static int floatToInt(float x) {
 		return (int)(x * 255);
 	}
@@ -49,12 +46,19 @@ class SColor {
 		this.b = 0;
 	}
 
-
 	public SColor copy() {
 		return new SColor(this.r, this.g, this.b);
 	}
 
 	public Color getColor() {
 		return new Color(this.r, this.g, this.b);
+	}
+
+	public String toString() {
+		if (r == g && g == b) {
+			return "GREY:"+r;
+		} else {
+			return "RGB:"+r+","+g+","+b;
+		}
 	}
 }
