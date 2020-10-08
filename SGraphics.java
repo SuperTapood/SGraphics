@@ -19,6 +19,7 @@ class SGraphics {
 		current.evaluatePixelGrid();
 		previous = current.copy();
 		current.render(gr);
+		current.print();
 	}
 
 	public void drawRect(Rect s, SColor c) {
