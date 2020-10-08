@@ -38,10 +38,28 @@ class SPixelGrid {
   public void render(Graphics gr) {
     // System.out.println("SPixelGrid.render(): "+gr);
     for (int i = 0; i < pixels.length; i++) {
-      System.out.println("Hello I just rendered column #"+i);
+      System.out.println("Hello, I just rendered column #"+i);
       for (int j = 0; j < pixels[i].length; j++) {
         pixels[i][j].render(gr);
       }
     }
+  }
+
+  public String toString(int jump) {
+    String out = "SPixelGrid: ";
+    for (int i = 0; i < pixels.length - jump; i+=jump) {
+      out += "[";
+      for (int j = 0; j < pixels[j].length - jump; j+=jump) {
+        out += pixels[i][j].getAvg();
+        out += ", ";
+      }
+      out = out.substring(0, out.length() - 2) + "],\n[";
+    }
+    out = out.substring(0, out.length() - 3) + "]";
+    return out;
+  }
+
+  public String toString() {
+    return this.toString(20);
   }
 }

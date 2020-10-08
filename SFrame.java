@@ -43,6 +43,7 @@ class SFrame {
 
 	public void render(Graphics gr) {
 		// System.out.println("SFrame.render(): "+gr);
+		System.out.println(pg.toString());
 		pg.render(gr);
 	}
 

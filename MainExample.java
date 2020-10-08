@@ -9,12 +9,12 @@ class MainExample extends Canvas {
     SGraphics g = new SGraphics(gr, sizeX, sizeY);
 
     // All the drawing attempts and syntax review here:
-    g.drawRect(new Rect(10, 10), Const.BLACK);
+    g.drawRect(new Rect(100, 100), Const.WHITE);
 
     // What SHOULD Happen (java.awt.Graphics code):
-    
+
     // gr.setColor(new Color(0, 0, 0));
-    // gr.fillRect(0, 0, 10, 10);
+    // gr.fillRect(0, 0, 100, 100);
 
     g.finishFrame(gr);
   }
