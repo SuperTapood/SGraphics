@@ -46,7 +46,7 @@ class SPixelGrid {
   }
 
   public String toString(int jump) {
-    String out = "SPixelGrid: ";
+    String out = "SPixelGrid:\n";
     for (int i = 0; i < pixels.length - jump; i+=jump) {
       out += "[";
       for (int j = 0; j < pixels[j].length - jump; j+=jump) {

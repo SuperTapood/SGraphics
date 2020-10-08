@@ -26,5 +26,14 @@ class MainExample extends Canvas {
     f.setSize(m.sizeX, m.sizeY);
     f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     f.setVisible(true);
+
+    m.addMouseListener(new MouseAdapter() {
+      @Override
+      public void mouseClicked(MouseEvent e) {
+        int x = e.getX();
+        int y = e.getY();
+        m.repaint();
+      }
+    });
   }
 }
