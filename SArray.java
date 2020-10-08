@@ -39,6 +39,7 @@ public class SArray{
     // do not print an empty array plz, java does not take that kindly
     if (this.length == 0){
       // you were warned, were you not?
+      // now your code shall be bricked
       throw new CustomException("Cannot print a blank array");
     }
     for (int i = 0; i < this.array.length; i++){
