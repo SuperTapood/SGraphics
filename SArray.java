@@ -1,9 +1,9 @@
-public class SArray{
+/*public class SArray {
   public SObject[] array = new SObject[0];
   // yes, i want to have a length variable of my own, now bugger off
   public int length = 0;
 
-  public void append(int value){
+  public void append(SObject value) {
     SObject[] newArray = new SObject[this.length + 1];
     for (int i = 0; i < this.length; i++){
       newArray[i] = this.array[i];
@@ -14,20 +14,20 @@ public class SArray{
     this.length++;
   }
 
-  public SObject pop(int index){
+  public SObject pop(int index) {
     SObject item = this.getItem(index);
-    // this also works: this.remove(item)
+    // this also works: this.remove(item);
     this.remove(index);
     this.length--;
     return item;
   }
 
-  public SObject pop(){
+  public SObject pop() {
     // default pop operation
     return this.pop(this.length - 1);
   }
 
-  public SArray copy(){
+  public SArray copy() {
     SArray array = new SArray();
     for (SObject obj : this.array){
       array.append(obj.copy());
@@ -35,7 +35,7 @@ public class SArray{
     return array;
   }
 
-  public void print(){
+  public void print() {
     // do not print an empty array plz, java does not take that kindly
     if (this.length == 0){
       // you were warned, were you not?
@@ -48,3 +48,4 @@ public class SArray{
     }
   }
 }
+*/

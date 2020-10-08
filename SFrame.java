@@ -6,7 +6,7 @@ class SFrame {
 	SObject[] objects = new SObject[256];
 	// the new array object,
 	// courtesy of the apature labratories computer science department
-	SArray altArray = new SArray();
+	// SArray altArray = new SArray();
 
 	public SFrame(int w, int h) {
 		pg = new SPixelGrid(w, h);
@@ -30,9 +30,9 @@ class SFrame {
 	}
 
 	// ok this is better imo
-	public void add(SObject obj){
-		this.altArray.append(obj);
-	}
+	// public void add(SObject obj){
+	// 	this.altArray.append(obj);
+	// }
 
 	public void evaluatePixelGrid() {
 		for (SObject o : objects) {

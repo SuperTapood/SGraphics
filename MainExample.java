@@ -7,16 +7,14 @@ class MainExample extends Canvas {
 
   public void paint(Graphics gr) {
     SGraphics g = new SGraphics(gr, sizeX, sizeY);
-    // System.out.println("SGraphics:"+g);
-    // System.out.println("Graphics:"+gr);
 
     // All the drawing attempts and syntax review here:
-    Rect objectShape1 = new Rect(10, 10);
-    g.drawRect(objectShape1, Const.BLACK);
+    g.drawRect(new Rect(10, 10), Const.BLACK);
 
     // What SHOULD Happen (java.awt.Graphics code):
+    
     // gr.setColor(new Color(0, 0, 0));
-    // gr.fillRect(0, 0, 100, 100);
+    // gr.fillRect(0, 0, 10, 10);
 
     g.finishFrame(gr);
   }
