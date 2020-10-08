@@ -11,7 +11,7 @@ class MainExample extends Canvas {
     // System.out.println("Graphics:"+gr);
 
     // All the drawing attempts and syntax review here:
-    Rect objectShape1 = new Rect(100, 100);
+    Rect objectShape1 = new Rect(10, 10);
     g.drawRect(objectShape1, Const.BLACK);
 
     // What SHOULD Happen (java.awt.Graphics code):
