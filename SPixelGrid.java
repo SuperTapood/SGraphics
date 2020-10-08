@@ -24,6 +24,7 @@ class SPixelGrid {
     for (int i = 0; i < boundingBox.getSize(); i++) {
       Pt point = boundingBox.getPositionByIndex(i);
       pixels[point.x][point.y].setColor(o.getPixel(point));
+      System.out.println("Point was altered: X="+point.x+", Y="+point.y+", To="+o.getPixel(point).getBrightness());
     }
   }
 
@@ -38,7 +39,9 @@ class SPixelGrid {
   public void render(Graphics gr) {
     // System.out.println("SPixelGrid.render(): "+gr);
     for (int i = 0; i < pixels.length; i++) {
-      System.out.println("Hello, I just rendered column #"+i);
+      if (i % 20 == 0) {
+        System.out.println("Hello, I just rendered column #"+i);
+      }
       for (int j = 0; j < pixels[i].length; j++) {
         pixels[i][j].render(gr);
       }

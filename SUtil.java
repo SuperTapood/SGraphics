@@ -35,11 +35,22 @@ class SUtil {
 
   public static String arrayToString(Object[] array) {
     String s = "[";
+    short threeDots = (short) 0;
     for (int i = 0; i < array.length; i++) {
       if (array[i] == null) {
         s += "null, ";
       } else {
         s += array[i].toString() + ", ";
+      }
+      if (i > 0) {
+        if (array[i] == array[i-1]) {
+          threeDots++;
+        } else {
+          threeDots = (short) 0;
+        }
+      }
+      if (threeDots >= Const.ARRAY_FORMAT_SAME_ELEMENT_LIMIT) {
+        return s + "...]";
       }
     }
     return s.substring(0, s.length() - 2) + "]";

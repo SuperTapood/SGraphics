@@ -38,6 +38,7 @@ class SFrame {
 		for (SObject o : objects) {
 			if (o == null) break;
 			pg.drawObject(o);
+			System.out.println("Object (" + o.toString() + ") was added.");
 		}
 	}
 
@@ -60,5 +61,6 @@ class SFrame {
 		// 	System.out.println(obj);
 		// 	System.out.println(SUtil.arrayToString(obj)); }
 		System.out.println(SUtil.arrayToString(this.objects));
+		System.out.println("Click on the Frame to Repaint!");
 	}
 }

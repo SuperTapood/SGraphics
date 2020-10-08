@@ -1,5 +1,7 @@
 import java.awt.*;
 import javax.swing.JFrame;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 class MainExample extends Canvas {
   int sizeX = 500;
