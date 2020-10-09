@@ -61,4 +61,8 @@ class SColor {
 			return "RGB:"+r+","+g+","+b;
 		}
 	}
+
+	public int getBrightness() {
+		return (r + g + b) / 3;
+	}
 }

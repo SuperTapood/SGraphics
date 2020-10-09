@@ -46,4 +46,8 @@ class SPixel {
     g.setColor(this.color.getColor());
     g.drawLine(this.x, this.y, this.x, this.y);
 	}
+
+	public int getAvg() {
+		return color.getBrightness();
+	}
 }

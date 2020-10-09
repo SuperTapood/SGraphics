@@ -19,8 +19,6 @@ class SUtil {
     return null;
   }
 
-  // kinda deprecated lol
-  // refer to SArray line 17
   public static Object[] pop(Object[] arr, int index) {
     if (arr == null || index < 0 || index >= arr.length) {
       return arr;
@@ -37,18 +35,27 @@ class SUtil {
 
   public static String arrayToString(Object[] array) {
     String s = "[";
+    short threeDots = (short) 0;
     for (int i = 0; i < array.length; i++) {
       if (array[i] == null) {
         s += "null, ";
       } else {
         s += array[i].toString() + ", ";
       }
+      if (i > 0) {
+        if (array[i] == array[i-1]) {
+          threeDots++;
+        } else {
+          threeDots = (short) 0;
+        }
+      }
+      if (threeDots >= Const.ARRAY_FORMAT_SAME_ELEMENT_LIMIT) {
+        return s + "...]";
+      }
     }
     return s.substring(0, s.length() - 2) + "]";
   }
 
-  // lol kinda deprectated this one too lmao
-  // refer to SArray line 28
   public static SObject[] copyArray(SObject[] array) {
     SObject[] o = new SObject[array.length];
     for (int i = 0; i < o.length; i++) {
@@ -62,3 +69,5 @@ class SUtil {
     return o;
   }
 }
+
+// The ONLY changes allowed in this class are optimization and adding functions!

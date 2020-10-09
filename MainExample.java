@@ -1,5 +1,7 @@
 import java.awt.*;
 import javax.swing.JFrame;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 class MainExample extends Canvas {
   int sizeX = 500;
@@ -7,14 +9,12 @@ class MainExample extends Canvas {
 
   public void paint(Graphics gr) {
     SGraphics g = new SGraphics(gr, sizeX, sizeY);
-    // System.out.println("SGraphics:"+g);
-    // System.out.println("Graphics:"+gr);
 
     // All the drawing attempts and syntax review here:
-    Rect objectShape1 = new Rect(10, 10);
-    g.drawRect(objectShape1, Const.BLACK);
+    g.drawRect(new Rect(100, 100), Const.WHITE);
 
     // What SHOULD Happen (java.awt.Graphics code):
+
     // gr.setColor(new Color(0, 0, 0));
     // gr.fillRect(0, 0, 100, 100);
 
@@ -28,5 +28,14 @@ class MainExample extends Canvas {
     f.setSize(m.sizeX, m.sizeY);
     f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     f.setVisible(true);
+
+    m.addMouseListener(new MouseAdapter() {
+      @Override
+      public void mouseClicked(MouseEvent e) {
+        int x = e.getX();
+        int y = e.getY();
+        m.repaint();
+      }
+    });
   }
 }

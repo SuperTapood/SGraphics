@@ -6,7 +6,7 @@ class SFrame {
 	SObject[] objects = new SObject[256];
 	// the new array object,
 	// courtesy of the apature labratories computer science department
-	SArray altArray = new SArray();
+	// SArray altArray = new SArray();
 
 	public SFrame(int w, int h) {
 		pg = new SPixelGrid(w, h);
@@ -30,19 +30,21 @@ class SFrame {
 	}
 
 	// ok this is better imo
-	public void add(SObject obj){
-		this.altArray.append(obj);
-	}
+	// public void add(SObject obj){
+	// 	this.altArray.append(obj);
+	// }
 
 	public void evaluatePixelGrid() {
 		for (SObject o : objects) {
 			if (o == null) break;
 			pg.drawObject(o);
+			System.out.println("Object (" + o.toString() + ") was added.");
 		}
 	}
 
 	public void render(Graphics gr) {
 		// System.out.println("SFrame.render(): "+gr);
+		System.out.println(pg.toString());
 		pg.render(gr);
 	}
 
@@ -59,5 +61,6 @@ class SFrame {
 		// 	System.out.println(obj);
 		// 	System.out.println(SUtil.arrayToString(obj)); }
 		System.out.println(SUtil.arrayToString(this.objects));
+		System.out.println("Click on the Frame to Repaint!");
 	}
 }
