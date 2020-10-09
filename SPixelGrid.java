@@ -19,15 +19,21 @@ class SPixelGrid {
     construct();
   }
 
+  // Convert SObject o to pixels and add them to SPixel[][] pixels.
   public void drawObject(SObject o) {
+    // Only go over the pixels in the bounding box, and not all pixels in the panel [Optimization]
     Rect boundingBox = o.getBoundingBox();
     for (int i = 0; i < boundingBox.getSize(); i++) {
+      // Get the pixel point.
       Pt point = boundingBox.getPositionByIndex(i);
+      // Add the point to the SPixel[][] pixels, overriding any previous colors.
       pixels[point.x][point.y].setColor(o.getPixel(point));
+      // Printing what happened because this code doesn't work :(
       System.out.println("Point was altered: X="+point.x+", Y="+point.y+", To="+o.getPixel(point).getBrightness());
     }
   }
 
+  // Initiallize the SPixel[][] pixels with Const.BLACK Background.
   public void construct() {
     for (int i = 0; i < pixels.length; i++) {
       for (int j = 0; j < pixels[i].length; j++) {
@@ -36,10 +42,11 @@ class SPixelGrid {
     }
   }
 
+  // Go over each pixel and render them. LAGGY OPERATION - Optimization required!
   public void render(Graphics gr) {
     // System.out.println("SPixelGrid.render(): "+gr);
     for (int i = 0; i < pixels.length; i++) {
-      if (i % 20 == 0) {
+      if (i % 20 == 0) { // Don't spam the console too much
         System.out.println("Hello, I just rendered column #"+i);
       }
       for (int j = 0; j < pixels[i].length; j++) {
@@ -48,8 +55,16 @@ class SPixelGrid {
     }
   }
 
+  // Convert the SPixelGrid to printable String.
+  // Format:
+  // "SPixelGrid: (width, height)
+  // [0, 0, 0, 0, 0],
+  // [0, 0, 0, 0, 0],
+  // [0, 0, 0, 0, 0],
+  // [0, 0, 0, 0, 0],
+  // [0, 0, 0, 0, 0]"
   public String toString(int jump) {
-    String out = "SPixelGrid:\n";
+    String out = "SPixelGrid: ("+width+","+height+")\n";
     for (int i = 0; i < pixels.length - jump; i+=jump) {
       out += "[";
       for (int j = 0; j < pixels[j].length - jump; j+=jump) {
@@ -62,6 +77,7 @@ class SPixelGrid {
     return out;
   }
 
+  // Defining default int jump value.
   public String toString() {
     return this.toString(20);
   }
