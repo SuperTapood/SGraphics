@@ -4,9 +4,17 @@ class SColor {
 	int r;
 	int g;
 	int b;
+	// red/green/blue 0-255 format.
+	// Optimization idea: use byte instead of int, and add 128 in each calculation. byte = Int.8Bit
 
 	private static int floatToInt(float x) {
 		return (int)(x * 255);
+	}
+
+	public SColor() {
+		this.r = 0;
+		this.g = 0;
+		this.b = 0;
 	}
 
 	public SColor(int r, int g, int b) {
@@ -21,6 +29,18 @@ class SColor {
 		this.b = rgb[2];
 	}
 
+	public SColor(int gray) {
+		this.r = gray;
+		this.g = gray;
+		this.b = gray;
+	}
+
+	public SColor(float r, float g, float b) {
+		this.r = SColor.floatToInt(r);
+		this.g = SColor.floatToInt(g);
+		this.b = SColor.floatToInt(b);
+	}
+
 	public SColor(float[] rgb) {
 		this.r = SColor.floatToInt(rgb[0]);
 		this.g = SColor.floatToInt(rgb[1]);
@@ -32,18 +52,6 @@ class SColor {
 		this.r = staticColor;
 		this.g = staticColor;
 		this.b = staticColor;
-	}
-
-	public SColor(int gray) {
-		this.r = gray;
-		this.g = gray;
-		this.b = gray;
-	}
-
-	public SColor() {
-		this.r = 0;
-		this.g = 0;
-		this.b = 0;
 	}
 
 	public SColor copy() {
