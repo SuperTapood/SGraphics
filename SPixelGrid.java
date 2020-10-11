@@ -26,6 +26,9 @@ class SPixelGrid {
     for (int i = 0; i < boundingBox.getSize(); i++) {
       // Get the pixel point.
       Pt point = boundingBox.getPositionByIndex(i);
+      if (point == null) {
+        continue;
+      }
       // Add the point to the SPixel[][] pixels, overriding any previous colors.
       if (o.getPixel(point) == null) {
         continue;
