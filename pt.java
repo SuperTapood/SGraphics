@@ -1,6 +1,7 @@
-// Point
+// The Abstract Idea of a Point.
 
 class Pt {
+	// Each point in 2d has two coordinates. We're using (X,Y) - Cartesian coordinates.
 	int x;
 	int y;
 
@@ -23,6 +24,7 @@ class Pt {
 		return new Pt(this.x, this.y);
 	}
 
+	// Arithematic Operations on the Point.
 	public Pt add(Pt other) {
 		this.x += other.x;
 		this.y += other.y;
