@@ -1,6 +1,7 @@
-// Line
+// The Abstract Idea of a Line
 
 class Ln {
+  // Which has two points, start and end.
     Pt a;
     Pt b;
 
