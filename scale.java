@@ -1,3 +1,5 @@
+// The Abstract Idea in ShZil's mind of having a class to make Pt.mult logical.
+
 class Scale {
   float x;
   float y;
@@ -39,6 +41,6 @@ class Scale {
 
 
 	public Scale copy() {
-		return new Scale(this);
+		return new Scale(x, y);
 	}
 }
