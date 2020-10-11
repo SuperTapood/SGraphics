@@ -1,5 +1,8 @@
+// A Draw-able Rectangle
+
 class SRect extends SShape {
   Rect rect;
+  // Automatically contains shape and texture. I hope.
 
   public SRect(int w, int h){
     this.rect = new Rect(w, h);
@@ -14,7 +17,7 @@ class SRect extends SShape {
   public SRect(Rect rect){
     this.rect = rect;
   }
-
+  // Why is there no Texture in the constructors? Magic.
 
   public Pt getPixelByIndex(int index) {
     return rect.getPositionByIndex(index);
@@ -32,6 +35,8 @@ class SRect extends SShape {
     return new SRect(this.rect.copy());
   }
 
+  // Format:
+  // "Rectangle:rect"
   public String toString() {
     return "Rectangle:"+rect.toString();
   }
