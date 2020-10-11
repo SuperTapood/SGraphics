@@ -1,4 +1,5 @@
 class SUtil {
+  // Bascially append for a fixed length array with 'null's as placeholders.
   public static Object[] replaceSingleNull(Object[] array, Object element) {
     for (int i = 0; i < array.length; i++) {
       if (array[i] == null) {
@@ -9,6 +10,7 @@ class SUtil {
     return null;
   }
 
+  // Bascially append for a fixed length SObject array with 'null's as placeholders.
   public static SObject[] replaceSingleNull(SObject[] array, SObject element) {
     for (int i = 0; i < array.length; i++) {
       if (array[i] == null) {
@@ -19,6 +21,7 @@ class SUtil {
     return null;
   }
 
+  // IDK you copied some code from online
   public static Object[] pop(Object[] arr, int index) {
     if (arr == null || index < 0 || index >= arr.length) {
       return arr;
@@ -33,6 +36,7 @@ class SUtil {
     return otherArray;
   }
 
+  // Stringify an array.
   public static String arrayToString(Object[] array) {
     String s = "[";
     short threeDots = (short) 0;
@@ -56,6 +60,7 @@ class SUtil {
     return s.substring(0, s.length() - 2) + "]";
   }
 
+  // Duplicate a SObject array without worring about reference types.
   public static SObject[] copyArray(SObject[] array) {
     SObject[] o = new SObject[array.length];
     for (int i = 0; i < o.length; i++) {
@@ -63,7 +68,7 @@ class SUtil {
       if (obj == null) {
         o[i] = null;
       } else {
-        o[i] = array[i];
+        o[i] = array[i].copy();
       }
     }
     return o;
