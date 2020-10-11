@@ -1,4 +1,6 @@
-/*public class SArray {
+import org.apache.commons.lang.ArrayUtils;
+
+public class SArray {
   public SObject[] array = new SObject[0];
   // yes, i want to have a length variable of my own, now bugger off
   public int length = 0;
@@ -21,6 +23,16 @@
     this.length--;
     return item;
   }
+
+  public static remove(int index){
+    this.array = ArrayUtils.remove(this.array, index);
+    }
+  }
+
+  public SObject getItem(int index){
+    return this.array[i];
+  }
+
 
   public SObject pop() {
     // default pop operation
@@ -48,4 +60,3 @@
     }
   }
 }
-*/
