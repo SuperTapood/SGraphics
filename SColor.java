@@ -62,6 +62,8 @@ class SColor {
 		return new Color(this.r, this.g, this.b);
 	}
 
+	// Format:
+	// "GREY:brightness" or "RGB:r,g,b"
 	public String toString() {
 		if (r == g && g == b) {
 			return "GREY:"+r;
@@ -70,6 +72,7 @@ class SColor {
 		}
 	}
 
+	// Get the average value of r, g, and b.
 	public int getBrightness() {
 		return (r + g + b) / 3;
 	}

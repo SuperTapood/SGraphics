@@ -4,10 +4,12 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 class MainExample extends Canvas {
+  // The size of the canvas, or panel. In pixels.
   int sizeX = 500;
   int sizeY = 500;
 
   public void paint(Graphics gr) {
+    // Create SmartGraphics instance.
     SGraphics g = new SGraphics(gr, sizeX, sizeY);
 
     // All the drawing attempts and syntax review here:
@@ -21,14 +23,16 @@ class MainExample extends Canvas {
     g.finishFrame(gr);
   }
   public static void main(String[] args) {
+    // General Java Code for every Rendering Project.
     MainExample m = new MainExample();
     JFrame f = new JFrame();
 
     f.add(m);
     f.setSize(m.sizeX, m.sizeY);
-    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Lets you write more commands in the cmd after the program is closed. int predefined value.
     f.setVisible(true);
 
+    // Mouse listener. Copied from my other projects.
     m.addMouseListener(new MouseAdapter() {
       @Override
       public void mouseClicked(MouseEvent e) {

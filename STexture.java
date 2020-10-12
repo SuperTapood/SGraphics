@@ -1,4 +1,5 @@
 class STexture {
+  // Textures can currently be:
   private static final int NONE = 0;
   private static final int COLOR = 1;
 
@@ -6,11 +7,17 @@ class STexture {
 
   SColor color;
 
+  public STexture() {
+    mode = STexture.NONE;
+    color = Const.BLACK;
+  }
+
   public STexture(SColor c) {
     mode = STexture.COLOR;
     color = c;
   }
 
+  // The important method here. Returns a color based on the location.
   public SColor getColorByPosition(Pt pos) {
     SColor toReturn = Const.BLACK;
     switch (mode) {
@@ -36,8 +43,10 @@ class STexture {
     return new STexture(this.color);
   }
 
+  // Format:
+  // "NONE" or "COLOR=color"
   public String toString() {
-    String toReturn = "STexture";
+    String toReturn = "STexture"; // A placeholder in case the mode doesn't fit NONE or COLOR, and we forgot to add a string-ify-er for the new mode.
     switch (mode) {
       case STexture.NONE:
          toReturn = "NONE";

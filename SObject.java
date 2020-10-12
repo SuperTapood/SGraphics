@@ -1,3 +1,5 @@
+// Everything that can be drawn. A rectangle, circle, oval, triangle, line, image, will all extend this class.
+
 class SObject {
 	SShape s;
 	STexture t;
@@ -29,6 +31,8 @@ class SObject {
 		return new SObject(s, t);
 	}
 
+	// Format:
+	// "SObject#shape#texture"
 	public String toString() {
 		return "SObject#" + s.toString() + "#" + t.toString();
 	}

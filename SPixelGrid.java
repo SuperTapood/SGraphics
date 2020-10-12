@@ -1,6 +1,7 @@
 import java.awt.Graphics;
 
 class SPixelGrid {
+  // A grid is a 2d array. And yes, I stored the Width and Height seperately.
   SPixel[][] pixels;
   int width;
   int height;
@@ -40,7 +41,7 @@ class SPixelGrid {
     }
   }
 
-  // Initiallize the SPixel[][] pixels with Const.BLACK Background.
+  // Initiallize the SPixel[][] pixels with Const.BLACK (Default color) Background.
   public void construct() {
     for (int i = 0; i < pixels.length; i++) {
       for (int j = 0; j < pixels[i].length; j++) {
@@ -84,8 +85,8 @@ public String toString(int jump) {
   return out;
 }
 
-// Defining default int jump value.
-public String toString() {
-  return this.toString(20);
-}
+  // Defining default int jump value.
+  public String toString() {
+    return this.toString(20);
+  }
 }
