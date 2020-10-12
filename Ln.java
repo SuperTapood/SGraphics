@@ -1,7 +1,8 @@
 // The Abstract Idea of a Line
 
 class Ln {
-  // Which has two points, start and end.
+    // Which has two points, start and end.
+    // yeah but how would you render it?
     Pt a;
     Pt b;
 

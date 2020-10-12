@@ -1,4 +1,5 @@
 // The Abstract Idea in ShZil's mind of having a class to make Pt.mult logical.
+// cool and all but why tho
 
 class Scale {
   float x;
