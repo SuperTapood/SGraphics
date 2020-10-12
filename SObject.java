@@ -1,5 +1,6 @@
 // Everything that can be drawn. A rectangle, circle, oval, triangle, line,
 // image, will all extend this class. - waste of memory
+// No it's not. It's actually quite easy on the memory, since java is highly optimized for class polymorphism (super/sub classes)
 
 class SObject {
 	SShape s;

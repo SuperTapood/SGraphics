@@ -14,6 +14,7 @@ class SFrame {
 
 
 	// how about no
+	// How about why not
 	public void addObject(SObject obj) {
 		SObject[] arr = SUtil.replaceSingleNull(this.objects, obj);
 		if (arr == null) {

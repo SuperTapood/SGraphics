@@ -31,6 +31,7 @@ class Rect {
   // Converts the 2d grid of points in the Rectangle to a 1d array. Top left is
   // index 0, going right, and down when the line ends.
   // ok but why is it 2d to begin with
+  // because a rect is 2d and not a line, and it makes the rest of the calculations easier.
   public Pt getPositionByIndex(int i) {
     return this.getPositionByCoordinates(i % w, i / w);
   }
@@ -46,6 +47,7 @@ class Rect {
     //&& origin.y + h > point.y;
     // nested ifs are faster i believe bc it needs to check less variables or
     // maybe it doesn't
+    // ig yes
     if (origin.x < point.x){
       if (origin.y < point.y){
         if (origin.x + w > point.x){
