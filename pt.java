@@ -26,6 +26,7 @@ class Pt {
 
 	// Arithematic Operations on the Point.
 	// why would that be useful tho
+	// For example, getting the point in a rectangle relative to itself, requires sub/add. Rect.java:39=getPositionByCoordinates.
 	public Pt add(Pt other) {
 		this.x += other.x;
 		this.y += other.y;
