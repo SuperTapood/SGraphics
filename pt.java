@@ -25,6 +25,7 @@ class Pt {
 	}
 
 	// Arithematic Operations on the Point.
+	// why would that be useful tho
 	public Pt add(Pt other) {
 		this.x += other.x;
 		this.y += other.y;

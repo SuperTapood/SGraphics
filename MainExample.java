@@ -3,6 +3,9 @@ import javax.swing.JFrame;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+// pls for the love of god can we move lines 13 to 27 into the library?
+// and use a seperate class for the main method
+
 class MainExample extends Canvas {
   // The size of the canvas, or panel. In pixels.
   int sizeX = 500;

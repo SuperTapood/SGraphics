@@ -1,12 +1,14 @@
 import java.awt.Graphics;
 
 class SGraphics {
-	Graphics g; // The normal java.awt.Graphics. I think this is not really useful, since you can't put Graphics on hold like that.
-	SFrame previous = null; // The previous frame. Currently doesn't do anything, it might in the future (Optimization ideas and such)
+	Graphics g; // The normal java.awt.Graphics. I think this is not really useful
+	//, since you can't put Graphics on hold like that.
+	SFrame previous = null; // The previous frame. Currently doesn't do anything,
+	//it might in the future (Optimization ideas and such)
 	SFrame current; // The current frame. Does that need explaining?
 	// Size of the canvas
-	int sizeX;
-	int sizeY;
+	int sizeX;// int X
+	int sizeY;// int Y
 
 	public SGraphics(Graphics g, int sizeX, int sizeY) {
 		this.g = g;

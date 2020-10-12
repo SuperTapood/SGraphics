@@ -1,5 +1,7 @@
 import java.awt.Color;
 
+// we do NOT need this class, a point can store rbg values
+
 class SColor {
 	int r;
 	int g;

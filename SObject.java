@@ -1,4 +1,5 @@
-// Everything that can be drawn. A rectangle, circle, oval, triangle, line, image, will all extend this class.
+// Everything that can be drawn. A rectangle, circle, oval, triangle, line,
+// image, will all extend this class. - waste of memory
 
 class SObject {
 	SShape s;
